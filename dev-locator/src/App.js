@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import MapGL, { Marker } from "react-map-gl";
+import React, { Component } from 'react';
+import MapGL, { Marker } from 'react-map-gl';
 
-import "mapbox-gl/dist/mapbox-gl.css";
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 export default class Map extends Component {
   state = {
@@ -10,17 +10,17 @@ export default class Map extends Component {
       height: window.innerHeight,
       latitude: -23.5439948,
       longitude: -46.6065452,
-      zoom: 14
-    }
+      zoom: 14,
+    },
   };
 
   componentDidMount() {
-    window.addEventListener("resize", this._resize);
+    window.addEventListener('resize', this._resize);
     this._resize();
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this._resize);
+    window.removeEventListener('resize', this._resize);
   }
 
   _resize = () => {
@@ -28,8 +28,8 @@ export default class Map extends Component {
       viewport: {
         ...this.state.viewport,
         width: window.innerWidth,
-        height: window.innerHeight
-      }
+        height: window.innerHeight,
+      },
     });
   };
 
@@ -46,7 +46,7 @@ export default class Map extends Component {
         onClick={this.handleMapClick}
         mapStyle="mapbox://styles/mapbox/basic-v9"
         mapboxApiAccessToken={
-          "pk.eyJ1IjoiZGllZ28zZyIsImEiOiJjamh0aHc4em0wZHdvM2tyc3hqbzNvanhrIn0.3HWnXHy_RCi35opzKo8sHQ"
+          'pk.eyJ1IjoiZGllZ28zZyIsImEiOiJjamh0aHc4em0wZHdvM2tyc3hqbzNvanhrIn0.3HWnXHy_RCi35opzKo8sHQ'
         }
         onViewportChange={viewport => this.setState({ viewport })}
       >
@@ -61,7 +61,7 @@ export default class Map extends Component {
             style={{
               borderRadius: 100,
               width: 48,
-              height: 48
+              height: 48,
             }}
             src="https://avatars2.githubusercontent.com/u/2254731?v=4"
           />
