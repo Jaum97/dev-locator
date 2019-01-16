@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Map from '../pages/Main/Map';
+import Map from '../pages/Map/Map';
 
 const Routes = () => (
   <BrowserRouter>

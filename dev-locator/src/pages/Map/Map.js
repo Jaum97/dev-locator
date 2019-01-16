@@ -45,16 +45,14 @@ export default class Map extends Component {
         {...this.state.viewport}
         onClick={this.handleMapClick}
         mapStyle="mapbox://styles/mapbox/basic-v9"
-        mapboxApiAccessToken={
-          'pk.eyJ1IjoiZGllZ28zZyIsImEiOiJjamh0aHc4em0wZHdvM2tyc3hqbzNvanhrIn0.3HWnXHy_RCi35opzKo8sHQ'
-        }
+        mapboxApiAccessToken="pk.eyJ1IjoiZGllZ28zZyIsImEiOiJjamh0aHc4em0wZHdvM2tyc3hqbzNvanhrIn0.3HWnXHy_RCi35opzKo8sHQ"
         onViewportChange={viewport => this.setState({ viewport })}
       >
         <Marker
           latitude={-23.5439948}
           longitude={-46.6065452}
           onClick={this.handleMapClick}
-          captureClick={true}
+          captureClick
         >
           <img
             alt="test"
